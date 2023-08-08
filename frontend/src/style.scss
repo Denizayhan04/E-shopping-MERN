@@ -1,0 +1,257 @@
+.App{
+    position: relative;
+    
+    .header{
+        position: relative;
+        height: 130px;
+        width: 100%;
+        
+        .upheader{
+            position: relative;
+            background-color: purple;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .inputdiv{
+                background-color: white;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 600px;
+                height: 48px;
+                border-radius: 48px;
+                .inputsvg{
+                    cursor: pointer;
+                    z-index: 9;
+                    height: 48px;
+                    width: 40px;
+                    
+                }
+                input{
+                    font-size: 24px;
+                    width:calc(100% - 48px); 
+                    height: 100%;
+                    border-top-left-radius: 24px;
+                    border-bottom-left-radius: 24px;
+                    padding-left: 30px;
+                    outline: none;
+                    border: none;
+                }
+                
+                
+            }
+            .user{
+                position: relative;
+                height: 100%;
+                width: 150px;
+                display: flex;
+                align-items: center;
+                margin-left: 25px;
+                padding-right: 10px;
+                a{
+                    display: block;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+                
+                .usersvg{
+                    height: 48px;
+                    width: 60px;
+                }
+                .usermenu{
+                    position: relative;
+                    height: 100%;
+                    
+                    ul{
+                        
+                        padding: 10px ;                        
+                        list-style: none;
+                        height: 100%;
+                        padding-right: 0px;
+                        li{
+                            a{color: white; }   
+                            height: 20px;
+                        }
+                    }
+                    
+                    
+                    
+                }
+            }
+            .basketdiv{
+                cursor: pointer;
+                display: flex;
+                width: 40px;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                .basketsvg{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+        
+        .downheader{
+            position: relative;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid gray;            
+            overflow-x: hidden;
+
+            .listitem{
+                
+                &:hover{
+                    background-color: gray;
+                }
+                min-width: fit-content;
+                width: 130px;
+                display: inline-flex;
+                align-items: center;
+                height: 100%;
+                padding: 0 8px;
+                span{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .svgs{
+                    margin-right: 5px;
+                    height: 100%;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+    .mainmenu{
+        position: relative;
+        width: 100%;
+        padding: 0 40px;
+        background-color: aqua;
+        .foryours{
+            overflow-x: auto;
+            height: 440px;
+            background-color: #dfd8f2;
+            margin: 0 auto;
+            max-width: 1250px;
+            border: 1px dashed black;
+            display: flex;
+            padding: 0 15px;
+            align-items: center;
+            margin-bottom: 50px;
+
+
+        }
+
+
+
+    }
+}
+.brandlist{
+    position: relative;
+    max-width: 1250px;
+    margin: 0 auto;
+    height: 150px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    background-color: #edeff3;
+    border: 1px solid black;
+    h2{
+        height: 40px;
+        margin-left: 100px;
+    }
+    .brands{
+        height: 90px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 50px;        
+        >a{
+            border-radius: 50%;
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin-right: 40px;
+            >img{
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+
+            }
+        }
+    }
+}
+.producttheme{
+    position: relative;
+    background-color: white;            
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    height: 370px;
+    text-align: center;
+    margin: 0 15px;
+    padding-top: 10px;
+    >a{
+        
+        img{
+            width:150px ;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+    }
+    >.description {
+
+        h3,h5,>div{
+            height: 30px;
+        }
+        >input{
+            margin-top: 20px;
+            cursor: pointer;
+            height: 40px;
+            width: 150px;
+            border-radius: 40px;
+            outline: none;
+            border: 0px;
+        }
+    }
+}
+.mainmenuproducts{    background-color: #dfd8f2;
+
+    position: relative;
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    >div{
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 1250px;
+        >div{
+            margin-bottom:15px ;
+            margin-top:15px ;
+        }
+    }
+}
+.footer{
+    margin-top: 30px;
+    position: relative;
+    height: 400px;
+    background-color: #dfd8f2;
+    p{
+        margin-top: 40px;
+        line-height: 40px;
+    }
+
+}
+@media screen and (max-width:1140px) {
+    .listitem{
+        span{display: none !important;}
+    }
+}
