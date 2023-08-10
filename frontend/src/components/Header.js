@@ -9,6 +9,7 @@ import Babycaricon from '../icons/Babycaricon'
 import Makeupicon from '../icons/Makeupicon'
 import Sporicon from '../icons/Sporicon'
 import Bookicon from '../icons/Bookicon'
+
 export default function Header() {
   return (
     <div className='header'>
@@ -29,7 +30,12 @@ export default function Header() {
 
           </div>
           </div>
-          <div className='basketdiv'><Basket /></div>
+          <div className='basketdiv'>
+            <a href='/basket'>
+            <Basket />
+            </a>
+
+          </div>
         </div>
         
         <div className='downheader'>

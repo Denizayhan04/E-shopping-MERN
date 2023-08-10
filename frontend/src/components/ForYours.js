@@ -4,13 +4,18 @@ import ProductTheme from './ProductTheme'
 export default function ForYours(props) {
   return (
     <div className='foryours'>
-          {props.products.filter(product=>props.foryours.includes(product.id)).map((e)=>(
+      <h3>FORYOURS</h3>
+      <div>
+
+            {props.products.filter(f=>props.foryours.includes(f.id)).map(index=>
+            (<ProductTheme products={index} />)
             
-            <ProductTheme data={e} />
-          ))}
-         {/*  <ProductTheme />
-          <ProductTheme />
-          <ProductTheme /> */}
+            )}
+              
+            </div>
+           
+
+
     </div>
   )
 }

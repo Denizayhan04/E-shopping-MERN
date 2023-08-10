@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ForYours from './ForYours'
 import ProductTheme from './ProductTheme'
 import Brands from './Brands'
@@ -10,7 +10,10 @@ export default function MainMenu(props) {
         <Brands brands={props.brands}/>                                                           
         <div className='mainmenuproducts'>
           <div>
-              <ProductTheme products ={props.products} />
+            {props.products.map(product =>(
+              <ProductTheme products ={product} />
+              ))}
+
             
           
           </div>
