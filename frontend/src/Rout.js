@@ -15,10 +15,9 @@ export default function Rout() {
 <BrowserRouter>
 <Routes>
    <Route path='/' element={<App products={products} />}/>
-   <Route path='/basket' element={<MyBasket />}/>
+   <Route path='/basket' element={<MyBasket products={products} />}/>
    {products.map((e)=>{
     let names = e.name.split(' ').join("%20")
-    console.log(names)
      return(
        <Route path={names} element={<ProductsPage data={e} />} />
      )

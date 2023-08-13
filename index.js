@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const {getdb,connectToDb} = require('./db');
 const cors = require('cors');
-
+const { Db } = require('mongodb');
 app.use(express.json());
 app.use(cors())
 let db;
@@ -55,6 +55,16 @@ app.get("/api/basket" ,async (req, res) => {
    console.log(error)
  }
 })
+app.delete("/api/basket/:id", async (req,res)=>{
+  const dataid = Number(req.params.id);
+  try {
+     const basketdatabase = await db.collection("basket")
+     basketdatabase.deleteOne({"productid" : dataid}).then(e=>res.status(200).json(e))
+  } catch (error) {
+    console.log(error)
+  }
+
+})
 app.post("/api/basket" ,async (req, res) => {
   try {
     const data = req.body;
@@ -65,17 +75,10 @@ app.post("/api/basket" ,async (req, res) => {
     console.log(error)
   }
 })
+/* app.delete('/api/basket/:id ',(req,res)=>{
+  req.params.id = dataid
+  db.collection('basket').deleteOne({productid:2}).then((e) => res.status(200).json(e))
+  res.json({asd:"31"})
 
-
-/* app.post("/api/basket/", async (req,res,next)=>{
-  const data = req.body;
-  try {
-    db.collection('basket').findOne({_id:ObjectId("64d37c2572ec2a4a61369f71")}).insertOne(data)
-    .then(result=>res.json({success:true}))
-    .catch(err=>console.log(err))
-
-
-  } catch (error) {
-    console.log(error)
-  }
 }) */
+

@@ -316,13 +316,14 @@
 
 }
 .myBasket{
+    text-align: center;
     width: 100%;
-    
     .container{
+        text-align: left;
+        background-color: gray;
         min-height: 600px;
         max-width:1000px ;
         margin: 60px auto;
-        background-color: aqua;
 
         .product{
             width: 100%;
@@ -330,16 +331,32 @@
             justify-content: space-between;
             align-items: center;
             height: 150px;
-            background-color: red;
+            border: 1px solid black;
             >div{
                 width: fit-content;
-                display: block; 
+                display: flex; 
                 height: 100%;
-                background-color: gray;
+                align-items: center;
+
+                    span{
+                        display: block;
+                        margin-left: 20px;
+                        margin-right: 10px;
+                        font: 1.5em sans-serif;
+                    }
+                
+                >img{
+                    height: 100px;
+                    width: 100px;
+                }
                 >span{
                     display: block;
                 }
             }
         }
     }    
+}
+.remove{
+    width: 40px;
+    cursor: pointer;
 }
